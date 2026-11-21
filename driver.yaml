@@ -1,0 +1,21 @@
+id: sama_s300
+name: 先马 S300（水冷头屏 960×480）
+version: 0.1.0
+api: 1
+min_core: "0.1.0"
+entry: driver:SamaS300
+platforms: [windows, linux, darwin]
+requires: [serial]
+description: 先马 S300 一体式水冷冷头上的 6 英寸 IPS 屏：55 AA 帧协议、JPEG 整帧推图、面板倒装 180°
+enabled_by_default: true
+settings_schema:
+  port:
+    {type: str, default: "", label: 串口, hint: 留空则按 USB 33C3:7803 自动查找}
+  baud:
+    {type: int, default: 921600, label: 波特率}
+  jpeg_quality:
+    {type: int, default: 88, label: JPEG 质量, min: 30, max: 95}
+  auto_rotate:
+    {type: bool, default: true, label: 按面板角度自动旋转, hint: 面板倒装时保持开启}
+  keepalive_seconds:
+    {type: float, default: 2.0, label: 保活间隔（秒）}
