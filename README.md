@@ -1,10 +1,10 @@
 # lcdmuse-driver-sama — 先马 S300 水冷头屏驱动
 
-给 [lcdmuse](https://github.com/LycoRepo/lcdmuse) 用的驱动插件：驱动**先马 S300** 一体式水冷冷头上的 6 英寸 IPS 屏（960×480，USB CDC 串口）。
+给 [lcdmuse](https://github.com/Phenix704/lcdmuse) 用的驱动插件：驱动**先马 S300** 一体式水冷冷头上的 6 英寸 IPS 屏（960×480，USB CDC 串口）。
 
 ```
 pip install pyserial
-lcdmuse plugin add https://github.com/LycoRepo/lcdmuse-driver-sama   # 或下载后 plugin add <目录>
+lcdmuse plugin add https://github.com/Phenix704/lcdmuse-driver-sama   # 或下载后 plugin add <目录>
 lcdmuse drivers list      # 应看到 sama_s300，available: true
 lcdmuse probe             # 接上屏后能报出 COM 口
 lcdmuse render --plugin sama_s300 --out out/screen.png
